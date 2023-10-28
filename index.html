@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@300;500&display=swap" rel="stylesheet">
+    <title>Your stock is down</title>
+    <style>
+        p, ul {
+            font-family: Verdana, 'Poppins', sans-serif;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .main-box-stk {
+            border: 2px solid rgb(0, 140, 255);
+            border-radius: 7px;
+            background-color: skyblue;
+            padding: 10px;
+        }
+
+        .un-sub {
+            font-size: .65em;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .buy-btn {
+            margin-top: 30px;
+            font-family: Verdana, 'Poppins', sans-serif;
+            text-decoration: none;
+            color: white;
+            background-color: rgb(20, 122, 20);
+            padding: 10px 25px;
+            border-radius: 6px;
+            border: 2px solid rgb(23, 173, 23);
+            display: block;
+            text-align: center;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-box-stk">
+        <p>Hi {{userName}},</p>
+        <ul>
+            <li>Stock {{stockName}}</li>
+            <li>Down by {{pct}}</li>
+            <li>Current Price {{pval}}</li>
+            <li>52 week high {{hval}}</li>
+            <li>52 week low {{lval}}</li>
+        </ul>
+        <a href="https://groww.in/markets/top-losers?index=GIDXNIFTY100" target="_blank" class="buy-btn">Buy {{stockName}}</a>
+        
+    </div>
+    <p class="un-sub">If you wish to unsubscribe <a href="/">Click Here</a></p>
+
+
+
+</body>
+</html>
